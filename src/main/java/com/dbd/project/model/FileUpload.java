@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
  * POJO encapsulating the uploaded file received in a multipart request.
  * 
  * @author anda
- *
+ * 
  */
 public class FileUpload {
 
