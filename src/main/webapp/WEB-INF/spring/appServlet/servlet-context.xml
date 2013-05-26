@@ -41,7 +41,31 @@
 		<beans:constructor-arg ref="mongoDbFactory" />
 		<beans:constructor-arg ref="converter" />
 	</beans:bean>
+  
+    <!-- MongoTemplate for connecting and quering the documents in the database -->
+    <beans:bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <beans:constructor-arg name="mongo" ref="mongo" />
+        <beans:constructor-arg name="databaseName" value="dbd_project" />
+    </beans:bean>
+ <beans:bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <beans:property name="mappings">
+            <beans:value>
+                /upload.form=fileUploadController
+            </beans:value>
+        </beans:property>
+    </beans:bean>
 
+    <beans:bean id="fileUploadController" class="com.dbd.project.controller.FileUploadController">
+        <beans:property name="commandClass" value="com.dbd.project.model.FileUpload"/>
+        <beans:property name="formView" value="fileuploadform"/>
+        <beans:property name="successView" value="home"/>
+    </beans:bean>
+    
+    <!-- Register the .properties -->
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basename" value="message" />
+	</beans:bean>
 	<context:component-scan base-package="com.dbd.project" />
 
 
