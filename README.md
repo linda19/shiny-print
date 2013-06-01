@@ -19,6 +19,8 @@ Dupa ce downloadati proiectul, inainte sa il puteti rula trebuie sa urmati urmat
 	- mvn clean install
 	- mvn tomcat:run
 
+Teoretic, proiectul vs fi pornit pe http://localhost:8080/project, dar oricum o sa apara in mesajele de la tomcat din terminal adresa exacta la care se porneste local la voi.
+
 
 dbd project
 
