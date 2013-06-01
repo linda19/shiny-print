@@ -10,11 +10,11 @@ Dupa ce downloadati proiectul, inainte sa il puteti rula trebuie sa urmati urmat
 
 - porniti serverul de mongo dintr-un terminal (path catre folderul unde e salvat mongo)
 	- mongod.exe - path-ul automat unde va creaza db va fi ceva de genul C:\data\db
-		     - daca vreti sa va salveze db-ul in alta locatie folositi mongod.exe --dbpath my_path_here
+		     - daca vreti sa va salveze db-ul in alta locatie, folositi mongod.exe --dbpath my_path_here
 
 - porniti si o instanta de mongo (ALT TERMINAL, path catre folderul unde e salvat mongo)
 
-- dintr-un terminal cu path-ul catre folderul unde ati salvat proiectul de pe git, da-ti urmatoarele comenzi
+- dintr-un terminal cu path-ul catre folderul unde ati salvat proiectul de pe git, dati urmatoarele comenzi
 	- mvn eclipse:eclipse
 	- mvn clean install
 	- mvn tomcat:run
